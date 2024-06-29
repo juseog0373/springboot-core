@@ -15,6 +15,7 @@ public class MyContainerInitV2 implements ServletContainerInitializer {
         System.out.println("MyContainerInitV2.onStartup");
         System.out.println("c = " + c);
         System.out.println("ctx = " + ctx);
+
         for (Class<?> appInitClass : c) {
             try {
                 AppInit appInit = (AppInit) appInitClass.getDeclaredConstructor().newInstance();
